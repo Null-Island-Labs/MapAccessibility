@@ -4,7 +4,7 @@
 **WCAG 2.1 color accessibility checking for cartographic palettes.**
 
 [![NuGet](https://img.shields.io/nuget/v/MapAccessibility)](https://www.nuget.org/packages/MapAccessibility/)
-[![CI](https://github.com/null-island-labs/map-accessibility/actions/workflows/ci.yml/badge.svg)](https://github.com/null-island-labs/map-accessibility/actions/workflows/ci.yml)
+[![CI](https://github.com/null-island-labs/map-accessibility/actions/workflows/ci.yml/badge.svg)](https://github.com/null-island-labs/MapAccessibility/actions/workflows/ci.yml)
 [![.NET](https://img.shields.io/badge/.NET-8.0-512BD4)](https://dotnet.microsoft.com/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
