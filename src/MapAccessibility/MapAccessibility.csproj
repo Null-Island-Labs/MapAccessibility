@@ -10,7 +10,7 @@
 
     <!-- NuGet package metadata -->
     <PackageId>MapAccessibility</PackageId>
-    <Version>0.1.0</Version>
+    <Version>1.0.0</Version>
     <Authors>Chris Lyons</Authors>
     <Description>WCAG 2.1 color accessibility checking for cartographic palettes. Zero external dependencies.</Description>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
