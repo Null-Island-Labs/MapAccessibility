@@ -1,0 +1,8 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/MapAccessibility/MapAccessibility.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/MapAccessibility.Tests/MapAccessibility.Tests.csproj" />
+  </Folder>
+</Solution>

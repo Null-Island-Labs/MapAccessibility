@@ -1,0 +1,170 @@
+{
+  "_comment": "Shared test vectors for map-accessibility (Python), mapaccessibility (R), MapAccessibility (.NET). This file is the cross-language contract. Do not modify without updating all three implementations. Tolerances: contrast ratio ±0.01, luminance ±0.0001, RGB channels ±2, palette scores ±0.05.",
+
+  "contrast_ratio": [
+    {
+      "description": "Black on white — maximum contrast",
+      "fg": "#000000",
+      "bg": "#FFFFFF",
+      "expected_ratio": 21.0,
+      "expected_luminance_fg": 0.0,
+      "expected_luminance_bg": 1.0,
+      "meets_aa_normal": true,
+      "meets_aa_large": true,
+      "meets_aaa_normal": true,
+      "meets_aaa_large": true
+    },
+    {
+      "description": "White on white — minimum contrast",
+      "fg": "#FFFFFF",
+      "bg": "#FFFFFF",
+      "expected_ratio": 1.0,
+      "expected_luminance_fg": 1.0,
+      "expected_luminance_bg": 1.0,
+      "meets_aa_normal": false,
+      "meets_aa_large": false,
+      "meets_aaa_normal": false,
+      "meets_aaa_large": false
+    },
+    {
+      "description": "Dark blue on white — high contrast, typical map label",
+      "fg": "#1B4F72",
+      "bg": "#FFFFFF",
+      "expected_ratio": 8.72,
+      "expected_luminance_fg": 0.0704,
+      "expected_luminance_bg": 1.0,
+      "meets_aa_normal": true,
+      "meets_aa_large": true,
+      "meets_aaa_normal": true,
+      "meets_aaa_large": true
+    },
+    {
+      "description": "Mid-gray on white — borderline AA large",
+      "fg": "#767676",
+      "bg": "#FFFFFF",
+      "expected_ratio": 4.54,
+      "expected_luminance_fg": 0.1812,
+      "expected_luminance_bg": 1.0,
+      "meets_aa_normal": true,
+      "meets_aa_large": true,
+      "meets_aaa_normal": false,
+      "meets_aaa_large": true
+    },
+    {
+      "description": "Light gray on white — fails all thresholds",
+      "fg": "#AAAAAA",
+      "bg": "#FFFFFF",
+      "expected_ratio": 2.32,
+      "expected_luminance_fg": 0.4020,
+      "expected_luminance_bg": 1.0,
+      "meets_aa_normal": false,
+      "meets_aa_large": false,
+      "meets_aaa_normal": false,
+      "meets_aaa_large": false
+    },
+    {
+      "description": "Pure red on white",
+      "fg": "#FF0000",
+      "bg": "#FFFFFF",
+      "expected_ratio": 4.0,
+      "expected_luminance_fg": 0.2126,
+      "expected_luminance_bg": 1.0,
+      "meets_aa_normal": false,
+      "meets_aa_large": true,
+      "meets_aaa_normal": false,
+      "meets_aaa_large": false
+    },
+    {
+      "description": "Pure green on black",
+      "fg": "#00FF00",
+      "bg": "#000000",
+      "expected_ratio": 15.3,
+      "expected_luminance_fg": 0.7152,
+      "expected_luminance_bg": 0.0,
+      "meets_aa_normal": true,
+      "meets_aa_large": true,
+      "meets_aaa_normal": true,
+      "meets_aaa_large": true
+    },
+    {
+      "description": "Pure blue on black",
+      "fg": "#0000FF",
+      "bg": "#000000",
+      "expected_ratio": 2.44,
+      "expected_luminance_fg": 0.0722,
+      "expected_luminance_bg": 0.0,
+      "meets_aa_normal": false,
+      "meets_aa_large": false,
+      "meets_aaa_normal": false,
+      "meets_aaa_large": false
+    }
+  ],
+
+  "cvd_simulation": [
+    {
+      "description": "Pure red — significantly shifted under protanopia/deuteranopia",
+      "input": "#FF0000",
+      "protanopia": "#6D5F00",
+      "deuteranopia": "#A39000",
+      "tritanopia": "#FF000F"
+    },
+    {
+      "description": "Pure green — shifted under protanopia/deuteranopia",
+      "input": "#00FF00",
+      "protanopia": "#FFE500",
+      "deuteranopia": "#EFD63A",
+      "tritanopia": "#00F7D9"
+    },
+    {
+      "description": "Pure blue — shifted under tritanopia",
+      "input": "#0000FF",
+      "protanopia": "#0059FF",
+      "deuteranopia": "#003DFB",
+      "tritanopia": "#006B96"
+    },
+    {
+      "description": "White — achromatic, unchanged by all CVD types",
+      "input": "#FFFFFF",
+      "protanopia": "#FFFFFF",
+      "deuteranopia": "#FFFFFF",
+      "tritanopia": "#FFFFFF"
+    },
+    {
+      "description": "Black — achromatic, unchanged by all CVD types",
+      "input": "#000000",
+      "protanopia": "#000000",
+      "deuteranopia": "#000000",
+      "tritanopia": "#000000"
+    },
+    {
+      "description": "50% gray — achromatic, unchanged by all CVD types",
+      "input": "#808080",
+      "protanopia": "#808080",
+      "deuteranopia": "#808080",
+      "tritanopia": "#808080"
+    }
+  ],
+
+  "palette_scoring": [
+    {
+      "description": "Five distinct hues — moderate accessibility",
+      "colors": ["#1B4F72", "#F39C12", "#27AE60", "#E74C3C", "#8E44AD"],
+      "expected_min_contrast_gte": 1.0,
+      "expected_overall_score_gte": 0.3,
+      "expected_overall_score_lte": 0.9
+    },
+    {
+      "description": "Two identical colors — worst case",
+      "colors": ["#FF0000", "#FF0000"],
+      "expected_min_contrast_gte": 1.0,
+      "expected_min_contrast_lte": 1.0,
+      "expected_overall_score_lte": 0.1
+    },
+    {
+      "description": "Black and white — maximum contrast pair",
+      "colors": ["#000000", "#FFFFFF"],
+      "expected_min_contrast_gte": 20.0,
+      "expected_overall_score_gte": 0.9
+    }
+  ]
+}

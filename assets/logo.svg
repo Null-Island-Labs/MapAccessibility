@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+  <!-- Background - Quality tier dark -->
+  <rect width="128" height="128" rx="8" fill="#1A0F12"/>
+  
+  <!-- Eye shape - upper lid -->
+  <path d="M24 64 C24 64, 44 38, 64 38 C84 38, 104 64, 104 64" 
+        stroke="#FFFFFF" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  
+  <!-- Eye shape - lower lid -->
+  <path d="M24 64 C24 64, 44 90, 64 90 C84 90, 104 64, 104 64" 
+        stroke="#FFFFFF" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  
+  <!-- Iris circle - left half (dark/white stroke only) -->
+  <path d="M64 48 A16 16 0 0 0 64 80" 
+        stroke="#FFFFFF" stroke-width="2" fill="none"/>
+  
+  <!-- Iris circle - right half (Rose accent) -->
+  <path d="M64 80 A16 16 0 0 0 64 48" 
+        stroke="#F43F5E" stroke-width="2" fill="none"/>
+  
+  <!-- Iris fill - left half dark -->
+  <path d="M64 48 A16 16 0 0 0 64 80 Z" 
+        fill="#FFFFFF" opacity="0.12"/>
+  
+  <!-- Iris fill - right half Rose -->
+  <path d="M64 80 A16 16 0 0 0 64 48 Z" 
+        fill="#F43F5E" opacity="0.25"/>
+  
+  <!-- Pupil -->
+  <circle cx="64" cy="64" r="6" fill="#1A0F12" stroke="#FFFFFF" stroke-width="1.5"/>
+  
+  <!-- Pupil highlight -->
+  <circle cx="61" cy="61" r="1.5" fill="#FFFFFF" opacity="0.8"/>
+</svg>

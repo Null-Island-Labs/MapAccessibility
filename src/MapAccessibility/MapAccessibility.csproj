@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RootNamespace>MapAccessibility</RootNamespace>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+
+    <!-- NuGet package metadata -->
+    <PackageId>MapAccessibility</PackageId>
+    <Version>0.1.0</Version>
+    <Authors>Chris Lyons</Authors>
+    <Description>WCAG 2.1 color accessibility checking for cartographic palettes. Zero external dependencies.</Description>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageTags>accessibility;cartography;color;contrast;cvd;gis;map;palette;wcag</PackageTags>
+    <RepositoryUrl>https://github.com/null-island-labs/map-accessibility</RepositoryUrl>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <InternalsVisibleTo Include="MapAccessibility.Tests" />
+  </ItemGroup>
+
+</Project>
