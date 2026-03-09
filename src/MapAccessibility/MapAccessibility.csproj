@@ -10,12 +10,14 @@
 
     <!-- NuGet package metadata -->
     <PackageId>MapAccessibility</PackageId>
-    <Version>1.0.0</Version>
+    <Version>1.0.1</Version>
     <Authors>Chris Lyons</Authors>
     <Description>WCAG 2.1 color accessibility checking for cartographic palettes. Zero external dependencies.</Description>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageTags>accessibility;cartography;color;contrast;cvd;gis;map;palette;wcag</PackageTags>
-    <RepositoryUrl>https://github.com/null-island-labs/map-accessibility</RepositoryUrl>
+    <RepositoryUrl>https://github.com/Null-Island-Labs/MapAccessibility</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/Null-Island-Labs/MapAccessibility</PackageProjectUrl>
+    <RepositoryType>git</RepositoryType>
   </PropertyGroup>
 
   <ItemGroup>
